@@ -1,7 +1,7 @@
 @import "./../1.utils/1.variables";
 @import "./../1.utils/3.mixins";
 
-body nav {
+body > nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -25,5 +25,20 @@ body nav {
         border: none;
         text-decoration: none;
         outline: none;
+    }
+}
+
+body > section nav {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 0;
+    @include desktop {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        & ul {
+            width: 100vw;
+        }
     }
 }

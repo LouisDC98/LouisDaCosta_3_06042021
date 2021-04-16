@@ -1,0 +1,43 @@
+@import "./../1.utils/1.variables";
+@import "./../1.utils/3.mixins";
+
+body section nav ul {
+    margin: 0;
+    padding: 0 0.5rem;
+    & li {
+    @include button-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.3rem 0;
+    border: none;
+    width: 85vw;
+    background: rgb(248, 248, 248);
+    outline: none;
+    font-weight: bold;
+    @include desktop {
+        display: block;
+        float: left;
+        width: 30vw;
+        margin-left: 1rem;
+    }    
+        & i {
+            color: grey;
+            margin-left: 2.5rem;
+            width: 10%;
+            @include desktop {
+                    margin-left: 1rem;
+                }
+        }
+    
+    }
+}    
+
+li:hover {
+    background-color: rgba($purple, .3);
+    & i {
+        color: $purple;
+    }
+}
