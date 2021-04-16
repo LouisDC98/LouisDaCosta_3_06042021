@@ -1,0 +1,33 @@
+.footerNav {
+    background-color: rgb(63, 63, 63);
+    &__text {
+        color: white;
+        list-style: none;
+        margin: 0;
+        padding: 1rem 1rem 2rem 1rem;
+        &__header{
+            font-family: $shrikhand;
+            margin-bottom: 0.7rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        & li {
+            & a {
+                text-decoration: none;
+                color: white;
+            }
+            & i {
+                width: 1.5rem;
+            }
+        }
+    }
+}
+
+footer li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: white;   
+}

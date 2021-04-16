@@ -1,0 +1,40 @@
+.presentation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    &__location {
+        background-color: rgb(230, 230, 230);
+        box-shadow: 0 -3px 4px rgb(205, 205, 205);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        & i {
+            margin-right: 1rem;
+        }
+    }
+    &__subtitle {
+        width: 100vw;
+        margin: 1rem 1.5rem;
+    }
+}
+
+.register__menu {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 0;
+    & ol {
+        padding: 0;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        & ol {
+            width: 100vw;
+        }
+    }
+}

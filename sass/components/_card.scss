@@ -1,0 +1,59 @@
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 0 0 1rem 0;
+    position: relative;
+    @include button-shadow;
+    &__img{
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+        width: 100%;
+        height: 10rem;
+    }
+    &__new{
+        color: green;
+        position: absolute;
+        right: 5vw;
+        top: -1vw;
+        background-color: mediumaquamarine;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.1rem;
+        font-size: 0.9rem;
+        @include desktop {
+            right: 2vw;
+            top: 0vw;
+        }
+    }
+    &__description {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__repas {
+            margin: 0;
+            &__subtitle {
+                margin: 0;
+            }
+        }
+        &__iconv {
+            font-size: 1.5rem;
+            color: black;
+            position: absolute;
+            left : 80vw;
+        }
+        &__iconp {
+            color: transparent;
+            font-size: 1.5rem;
+            position: absolute;
+            left : 80vw;
+            transition: color 1.5s;
+        }
+    }
+}
+
+figcaption i.fas:hover {
+    background: -webkit-linear-gradient($pink, $purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

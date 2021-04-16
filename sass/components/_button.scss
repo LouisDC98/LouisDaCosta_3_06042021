@@ -1,0 +1,16 @@
+.explore {
+    @include button-shadow;
+    border-radius: 2rem;
+    background: linear-gradient($pink, $purple);
+    color: white;
+    padding: 1rem;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    margin-bottom: 2rem;
+}
+
+.explore:hover {
+    filter: saturate(150%);
+    @include button-shadow-dark;
+}
