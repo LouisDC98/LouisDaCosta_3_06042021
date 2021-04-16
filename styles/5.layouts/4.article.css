@@ -23,11 +23,13 @@ body main article figure {
   border-radius: 1rem;
   margin: 0 0 1rem 0;
   position: relative;
+  -webkit-box-shadow: 0px 5px 5px lightgray;
+          box-shadow: 0px 5px 5px lightgray;
 }
 
 @media (min-width: 768.1px) {
   body main article figure {
-    width: 47vw;
+    width: 45vw;
   }
 }
 
@@ -45,7 +47,8 @@ body main article figure > p {
   right: 5vw;
   top: -1vw;
   background-color: mediumaquamarine;
-  padding: 0 0.5rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.1rem;
   font-size: 0.9rem;
 }
 
@@ -105,7 +108,7 @@ body main article figure figcaption i.fas {
   }
 }
 
-i.fas:hover {
+figcaption i.fas:hover {
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

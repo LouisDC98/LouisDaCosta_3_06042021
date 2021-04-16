@@ -17,8 +17,9 @@ body main article {
         border-radius: 1rem;
         margin: 0 0 1rem 0;
         position: relative;
+        @include button-shadow;
         @include desktop {
-            width: 47vw;   
+            width: 45vw;   
         }
         & img {
             border-radius: 1rem 1rem 0 0;
@@ -32,7 +33,8 @@ body main article {
             right: 5vw;
             top: -1vw;
             background-color: mediumaquamarine;
-            padding: 0 0.5rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 0.1rem;
             font-size: 0.9rem;
             @include desktop {
                 right: 2vw;
@@ -73,7 +75,7 @@ body main article {
     }
 }
 
-i.fas:hover {
+figcaption i.fas:hover {
     background: -webkit-linear-gradient($pink, $purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

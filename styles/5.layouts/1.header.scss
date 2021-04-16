@@ -8,13 +8,8 @@ body > header {
 
 body section header {
     padding: 2rem 2rem 1rem 1.5rem;
-    font-weight: bold;
-    & h3 {
-        font-size: 1.5rem;
-    }
 }
 
 body main article header {
-    padding: 2rem 2rem 1rem 2rem;
-    font-weight: bold;
+    padding: 2rem 2rem 1rem 0.5rem;
 }
