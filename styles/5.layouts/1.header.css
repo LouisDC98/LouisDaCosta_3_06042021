@@ -17,4 +17,9 @@ body section header {
 body section header h3 {
   font-size: 1.5rem;
 }
+
+body main article header {
+  padding: 2rem 2rem 1rem 2rem;
+  font-weight: bold;
+}
 /*# sourceMappingURL=1.header.css.map */

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+body main article {
+  margin-top: 2rem;
+  background-color: #f0f0f0;
+  padding: 0 1rem 1rem 1rem;
+}
+
+@media (min-width: 768.1px) {
+  body main article section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+body main article figure {
+  background-color: white;
+  border-radius: 1rem;
+  margin: 0 0 1rem 0;
+  position: relative;
+}
+
+@media (min-width: 768.1px) {
+  body main article figure {
+    width: 47vw;
+  }
+}
+
+body main article figure img {
+  border-radius: 1rem 1rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 10rem;
+}
+
+body main article figure > p {
+  color: green;
+  position: absolute;
+  right: 5vw;
+  top: -1vw;
+  background-color: mediumaquamarine;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768.1px) {
+  body main article figure > p {
+    right: 2vw;
+    top: 0vw;
+  }
+}
+
+body main article figure figcaption {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main article figure figcaption div h4 {
+  margin: 0;
+}
+
+body main article figure figcaption div p {
+  margin: 0;
+}
+
+body main article figure figcaption i.far {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  left: 80vw;
+}
+
+@media (min-width: 768.1px) {
+  body main article figure figcaption i.far {
+    left: 40vw;
+  }
+}
+
+body main article figure figcaption i.fas {
+  color: transparent;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 80vw;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+@media (min-width: 768.1px) {
+  body main article figure figcaption i.fas {
+    left: 40vw;
+  }
+}
+
+i.fas:hover {
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*# sourceMappingURL=4.article.css.map */
