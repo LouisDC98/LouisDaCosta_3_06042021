@@ -1,0 +1,29 @@
+@import "./../1.utils/1.variables";
+@import "./../1.utils/3.mixins";
+
+body nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    padding: 1rem 2.5rem 3rem 2.5rem;
+    & h2 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 100vw;
+    }
+    & > p {
+        width: 100vw;
+    }
+    & a  {
+        @include button-shadow;
+        border-radius: 2rem;
+        background: linear-gradient($pink, $purple);
+        color: white;
+        padding: 1rem;
+        border: none;
+        text-decoration: none;
+        outline: none;
+    }
+}
