@@ -18,3 +18,33 @@ h2 {
 h3 {
     margin: 0;
 }
+
+/***Menus***/
+
+.menu__header h1 {
+    font-family: $shrikhand;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.blocChoice h2 {
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.choice h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    width: 100vw;
+}
+
+a:not(.explore) {
+    text-decoration: none;
+    color: black;
+}
+
+a:not(.explore):visited {
+    color: black;
+}
+

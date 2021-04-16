@@ -3,3 +3,32 @@
     background-color: rgb(240, 240, 240);
     padding: 0 1rem 1rem 1rem;
 }
+
+/***Menus***/
+
+.menu{
+    border-radius: 2rem 2rem 0 0 ;
+    background-color: rgb(240, 240, 240);
+    padding: 1rem;
+    margin-top: -4rem;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__icon {
+          font-size: 1.5rem;
+          margin-right: 10vw;
+        }
+    }
+    & hr {
+        width: 45px;
+        background-color: mediumaquamarine;
+        height: 3px;
+        border: none;
+        margin: 4px 0 0 0;
+    }
+    &__nav {
+        display: flex;
+        justify-content: center;
+    }
+}

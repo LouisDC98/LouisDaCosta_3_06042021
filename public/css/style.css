@@ -20,6 +20,34 @@ h3 {
   margin: 0;
 }
 
+/***Menus***/
+.menu__header h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.blocChoice h2 {
+  font-weight: 100;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.choice h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  width: 100vw;
+}
+
+a:not(.explore) {
+  text-decoration: none;
+  color: black;
+}
+
+a:not(.explore):visited {
+  color: black;
+}
+
 .step {
   box-shadow: 0px 5px 5px lightgray;
   display: flex;
@@ -83,6 +111,8 @@ body section nav ol li:hover i {
   text-decoration: none;
   outline: none;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .explore:hover {
@@ -152,6 +182,28 @@ figcaption i.fas:hover {
   -webkit-text-fill-color: transparent;
 }
 
+.menu__img {
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  max-height: 15rem;
+}
+
+.choice {
+  background-color: white;
+  border-radius: 1.2rem;
+  padding: 0.7rem 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0px 5px 5px lightgray;
+}
+.choice__description {
+  margin: 0;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -164,6 +216,22 @@ figcaption i.fas:hover {
 
 .restaurant__header {
   padding: 2rem 0rem 1rem;
+}
+
+/***Menus***/
+.menuHeader__icon {
+  margin: 0 0 0 1.5rem;
+  flex-grow: 1;
+}
+.menuHeader__logo {
+  padding: 1rem 3rem 1rem 0;
+  height: 34px;
+  flex-grow: 10;
+}
+.menuHeader a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .presentation {
@@ -215,6 +283,34 @@ figcaption i.fas:hover {
   padding: 0 1rem 1rem 1rem;
 }
 
+/***Menus***/
+.menu {
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin-top: -4rem;
+}
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__header__icon {
+  font-size: 1.5rem;
+  margin-right: 10vw;
+}
+.menu hr {
+  width: 45px;
+  background-color: mediumaquamarine;
+  height: 3px;
+  border: none;
+  margin: 4px 0 0 0;
+}
+.menu__nav {
+  display: flex;
+  justify-content: center;
+}
+
 .footerNav {
   background-color: #3f3f3f;
 }
@@ -238,12 +334,12 @@ figcaption i.fas:hover {
   width: 1.5rem;
 }
 
-footer li:hover {
+.footerNav li:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-footer a:visited {
+.footerNav a:visited {
   color: white;
 }
 
