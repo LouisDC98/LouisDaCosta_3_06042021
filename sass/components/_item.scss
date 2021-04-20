@@ -1,9 +1,12 @@
+/**Item for each rubric in menu**/
+
 .item {
     background-color: white;
     border-radius: 1.2rem;
     padding: 0.7rem 1rem;
     margin: 1rem 0;
     @include button-shadow;
+    animation: fadein 1.5s;
     &__body {
         display: flex;
         flex-wrap: nowrap;
@@ -22,4 +25,29 @@
             margin: 0;
         }
     }
+}
+
+/***Animation***/
+@keyframes fadein {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item:nth-child(1n) {
+    animation-delay: 0.3s ;
+}
+
+.item:nth-child(2n) {
+    animation-delay: 0.2s ;
+}
+
+.item:nth-child(3n) {
+    animation-delay: 0.1s ;
 }

@@ -47,6 +47,7 @@ a:not(.btn):visited {
   color: black;
 }
 
+/**Step of a list backgorund color becomes seocndary color when hover**/
 .blockStep {
   display: flex;
   justify-content: center;
@@ -120,6 +121,7 @@ body section nav ol li:hover i {
   color: #9356DC;
 }
 
+/**Button with gradient**/
 .btn {
   box-shadow: 0px 5px 5px lightgray;
   border-radius: 2rem;
@@ -139,6 +141,7 @@ body section nav ol li:hover i {
   box-shadow: 0px 5px 5px #b1b1b1;
 }
 
+/**Card for each restaurant**/
 .card {
   background-color: white;
   border-radius: 1rem;
@@ -164,7 +167,8 @@ body section nav ol li:hover i {
   margin: 0;
 }
 
-.menu__img {
+/**Image of the restaurant**/
+.poster {
   object-fit: cover;
   width: 100%;
   position: relative;
@@ -172,12 +176,14 @@ body section nav ol li:hover i {
   max-height: 15rem;
 }
 
+/**Item for each rubric in menu**/
 .item {
   background-color: white;
   border-radius: 1.2rem;
   padding: 0.7rem 1rem;
   margin: 1rem 0;
   box-shadow: 0px 5px 5px lightgray;
+  animation: fadein 1.5s;
 }
 .item__body {
   display: flex;
@@ -198,6 +204,30 @@ body section nav ol li:hover i {
   margin: 0;
 }
 
+/***Animation***/
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.item:nth-child(1n) {
+  animation-delay: 0.3s;
+}
+
+.item:nth-child(2n) {
+  animation-delay: 0.2s;
+}
+
+.item:nth-child(3n) {
+  animation-delay: 0.1s;
+}
+
+/**Little patch new**/
 .new {
   color: green;
   position: absolute;
@@ -215,6 +245,7 @@ body section nav ol li:hover i {
   }
 }
 
+/**Heart icon with gradient when hover**/
 .iconHeart {
   font-size: 1.5rem;
   position: absolute;
