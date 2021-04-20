@@ -1,0 +1,20 @@
+.iconHeart {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 7vw;
+}
+
+.iconHeart--full {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 7vw;
+    color: transparent;
+    transition: color 1.5s;
+}
+
+.iconHeart--full:active {
+    background: -webkit-linear-gradient($principalColor, $secondaryColor);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

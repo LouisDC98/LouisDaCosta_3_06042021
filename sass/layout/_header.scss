@@ -4,17 +4,12 @@
     padding: 1rem 0 1rem 0;
 }
 
-.register__header {
-    padding: 2rem 0rem 1rem 1rem;
-}
-
-.restaurant__header {
-    padding: 2rem 0rem 1rem;
-}
-
-/***Menus***/
-
-.menuHeader {
+.header--menu {
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
     &__icon {
         margin: 0 0 0 1.5rem;
         flex-grow: 1;
@@ -24,9 +19,13 @@
         height: 34px;
         flex-grow: 10;
     }
-    & a {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
+
+}
+
+.register__header {
+    padding: 2rem 0rem 1rem 1rem;
+}
+
+.restaurant__header {
+    padding: 2rem 0rem 1rem;
 }

@@ -1,0 +1,14 @@
+.new{
+    color: green;
+    position: absolute;
+    right: 5vw;
+    top: -1vw;
+    background-color: mediumaquamarine;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.1rem;
+    font-size: 0.9rem;
+    @include desktop {
+        right: 2vw;
+        top: 0vw;
+    }
+}

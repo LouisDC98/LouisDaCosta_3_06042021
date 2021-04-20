@@ -4,7 +4,7 @@
   "description": "ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LouisDC98/LouisDaCosta_3_06042021/issues"
   },
-  "homepage": "https://github.com/LouisDC98/LouisDaCosta_3_06042021/tree/develop"
+  "homepage": "https://github.com/LouisDC98/LouisDaCosta_3_06042021/tree/develop",
+  "devDependencies": {
+    "import-glob-loader": "^1.1.0"
+  }
 }
