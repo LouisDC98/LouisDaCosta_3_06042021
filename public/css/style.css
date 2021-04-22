@@ -39,6 +39,7 @@ h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-grow: 1;
 }
 
 a:not(.btn) {
@@ -272,30 +273,28 @@ body section nav ol li:hover i {
 .item {
   display: flex;
   background-color: white;
-  border-radius: 1.2rem;
   margin: 1rem 0;
+  border-radius: 1.2rem;
   box-shadow: 0px 5px 5px lightgray;
   animation: fadein 1.5s;
   overflow: hidden;
 }
-.item__container {
+.item__body {
   padding: 0.7rem 1rem;
-  border-radius: 1.2rem;
-  transition: width 1s linear;
-  width: 100vw;
+  flex-grow: 1;
+  overflow: hidden;
 }
-.item__container__body {
-  display: flex;
-  justify-content: space-between;
-}
-.item__container__body__description {
+.item__body__description {
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 70vw;
 }
-.item__container__body__price {
+.item__price {
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   font-weight: bold;
   margin: 0;
 }
@@ -367,45 +366,37 @@ body section nav ol li:hover i {
 
 /**Validation on each items with animation**/
 .check {
-  display: none;
   font-size: 1.5rem;
   background-color: #99E2D0;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   border-radius: 0 1.1rem 1.1rem 0;
-  flex-grow: 1;
+  width: 0;
+  text-align: center;
 }
 
 .item:hover .check {
-  animation: slideX 0.5s linear;
-  display: block;
+  animation: slideX 1s linear 1 both;
 }
 .item:hover .check__icon {
-  animation: rollon 1s;
-}
-.item:hover .item__container {
-  width: 60vw;
-}
-@media (min-width: 767px) {
-  .item:hover .item__container {
-    width: 80vw;
-  }
+  animation: rollon 0.5s linear;
+  animation-delay: 0.5s;
 }
 
+@keyframes slideX {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 20vw;
+  }
+}
 @keyframes rollon {
   0% {
     transform: rotate(360deg);
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-@keyframes slideX {
-  0% {
-    transform: translateX(70px);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 .header {

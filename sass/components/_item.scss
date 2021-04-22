@@ -3,31 +3,29 @@
 .item {
     display: flex;
     background-color: white;
-    border-radius: 1.2rem;
     margin: 1rem 0;
+    border-radius: 1.2rem;
     @include button-shadow;
     animation: fadein 1.5s;
     overflow: hidden;
-    &__container {
+    &__body {
         padding: 0.7rem 1rem;
-        border-radius: 1.2rem;
-        transition: width 1s linear;
-        width: 100vw;
-        &__body {
-            display: flex;
-            justify-content: space-between;
-            &__description {
-                margin: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 70vw;
-            }
-            &__price {
-                font-weight: bold;
-                margin: 0;
-            }
-        }
+        flex-grow: 1;
+        overflow: hidden;
+        &__description {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }   
+    }
+    &__price {
+        padding: 0.7rem 1rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-weight: bold;
+        margin: 0;
     }
 }
 
