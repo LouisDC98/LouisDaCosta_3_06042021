@@ -36,6 +36,9 @@ h3 {
 .item h3 {
     font-size: 1.1rem;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 a:not(.btn) {

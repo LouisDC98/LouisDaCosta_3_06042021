@@ -1,42 +1,28 @@
 /**Validation on each items with animation**/
 
 .check {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: $thirdColor;
-    font-size: 1.5rem;
     display: none;
+    font-size: 1.5rem;
+    background-color: $thirdColor;
     color: white;
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
     border-radius: 0 1.1rem 1.1rem 0;
+    flex-grow: 1;
 }
 
 .item:hover {
     .check {
-        animation: slideX 1s;
-        display: flex;
+        animation: slideX 0.5s linear;
+        display: block;
         &__icon {
             animation: rollon 1s;
         }
     }
-    .item__container__body {
-        &__description {
-            width: 55vw;
+    .item__container {
+        width: 60vw;
+        @include desktop {
+            width: 80vw;
         }
-        &__price{
-            animation: slideX 1s;
-        }
-    }
-}
-
-@keyframes slideX {
-    0% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        transform: translateX(0);
     }
 }
 
@@ -44,8 +30,17 @@
     0% {
         transform: rotate(360deg);
     }
-
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes slideX {
+    0% {
+        transform: translateX(70px);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }

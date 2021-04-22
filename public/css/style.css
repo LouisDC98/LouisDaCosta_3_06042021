@@ -36,6 +36,9 @@ h3 {
 .item h3 {
   font-size: 1.1rem;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 a:not(.btn) {
@@ -47,7 +50,9 @@ a:not(.btn):visited {
   color: black;
 }
 
+/**Loading screen**/
 .loading {
+  display: flex;
   width: 100%;
   height: 535%;
   margin: auto;
@@ -57,39 +62,67 @@ a:not(.btn):visited {
   left: 0;
   right: 0;
   z-index: -1;
-  animation: back 1.5s;
-  display: flex;
+  animation: back 2s;
 }
 .loading__circle {
   border: transparent;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   margin: auto;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  animation: spin 1.5s linear infinite;
+  animation: spin 2s linear;
+  border: 10px solid #99E2D0;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
+}
+.loading__circle--little {
+  border: transparent;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: reversespin 2s linear;
+  border: 10px solid transparent;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-    border: 10px solid #99E2D0;
-    border-top: 10px solid #FF79DA;
-    border-bottom: 10px solid #9356DC;
+    opacity: 1;
   }
   99% {
     transform: rotate(360deg);
-    border: 10px solid #99E2D0;
-    border-top: 10px solid #FF79DA;
-    border-bottom: 10px solid #9356DC;
+    opacity: 1;
   }
   100% {
     transform: rotate(360deg);
-    border: none;
+    opacity: 0;
+  }
+}
+@keyframes reversespin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  99% {
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg) scale(0);
+    opacity: 0;
   }
 }
 @keyframes back {
@@ -116,7 +149,7 @@ a:not(.btn):visited {
 .blockStep ol {
   padding: 0;
 }
-@media (min-width: 768.1px) {
+@media (min-width: 767px) {
   .blockStep {
     display: flex;
     justify-content: flex-start;
@@ -141,7 +174,7 @@ a:not(.btn):visited {
   font-weight: bold;
   position: relative;
 }
-@media (min-width: 768.1px) {
+@media (min-width: 767px) {
   .blockStep__step {
     display: block;
     float: left;
@@ -166,7 +199,7 @@ a:not(.btn):visited {
   margin-left: 2.5rem;
   width: 10%;
 }
-@media (min-width: 768.1px) {
+@media (min-width: 767px) {
   .blockStep__step__icon {
     margin-left: 1rem;
   }
@@ -238,20 +271,21 @@ body section nav ol li:hover i {
 /**Item for each rubric in menu**/
 .item {
   display: flex;
-  justify-content: space-between;
   background-color: white;
   border-radius: 1.2rem;
   margin: 1rem 0;
   box-shadow: 0px 5px 5px lightgray;
   animation: fadein 1.5s;
+  overflow: hidden;
 }
 .item__container {
   padding: 0.7rem 1rem;
+  border-radius: 1.2rem;
+  transition: width 1s linear;
   width: 100vw;
 }
 .item__container__body {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
 }
 .item__container__body__description {
@@ -259,6 +293,7 @@ body section nav ol li:hover i {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 70vw;
 }
 .item__container__body__price {
   font-weight: bold;
@@ -276,15 +311,15 @@ body section nav ol li:hover i {
     transform: translateY(0);
   }
 }
-.item:nth-child(1n) {
+.item:nth-child(1) {
   animation-delay: 0.3s;
 }
 
-.item:nth-child(2n) {
+.item:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.item:nth-child(3n) {
+.item:nth-child(3) {
   animation-delay: 0.1s;
 }
 
@@ -299,14 +334,14 @@ body section nav ol li:hover i {
   border-radius: 0.1rem;
   font-size: 0.9rem;
 }
-@media (min-width: 768.1px) {
+@media (min-width: 767px) {
   .new {
     right: 2vw;
     top: 0vw;
   }
 }
 
-/**Heart icon with gradient when hover**/
+/**Heart icon with gradient when active**/
 .iconHeart {
   font-size: 1.5rem;
   position: absolute;
@@ -318,10 +353,12 @@ body section nav ol li:hover i {
   position: absolute;
   right: 7vw;
   color: transparent;
-  transition: color 1.5s;
+  transition: opacity 0.2s linear;
+  opacity: 0;
 }
 
 .iconHeart--full:active {
+  opacity: 1;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
@@ -330,45 +367,45 @@ body section nav ol li:hover i {
 
 /**Validation on each items with animation**/
 .check {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #99E2D0;
-  font-size: 1.5rem;
   display: none;
+  font-size: 1.5rem;
+  background-color: #99E2D0;
   color: white;
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
   border-radius: 0 1.1rem 1.1rem 0;
+  flex-grow: 1;
 }
 
 .item:hover .check {
-  animation: slideX 1s;
-  display: flex;
+  animation: slideX 0.5s linear;
+  display: block;
 }
 .item:hover .check__icon {
   animation: rollon 1s;
 }
-.item:hover .item__container__body__description {
-  width: 55vw;
+.item:hover .item__container {
+  width: 60vw;
 }
-.item:hover .item__container__body__price {
-  animation: slideX 1s;
+@media (min-width: 767px) {
+  .item:hover .item__container {
+    width: 80vw;
+  }
 }
 
-@keyframes slideX {
-  0% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @keyframes rollon {
   0% {
     transform: rotate(360deg);
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes slideX {
+  0% {
+    transform: translateX(70px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 .header {

@@ -1,4 +1,4 @@
-/**Heart icon with gradient when hover**/
+/**Heart icon with gradient when active**/
 
 .iconHeart {
     font-size: 1.5rem;
@@ -11,10 +11,12 @@
     position: absolute;
     right: 7vw;
     color: transparent;
-    transition: color 1.5s;
+    transition: opacity 0.2s linear;
+    opacity: 0;
 }
 
 .iconHeart--full:active {
+    opacity: 1;
     background: -webkit-linear-gradient($principalColor, $secondaryColor);
     -webkit-background-clip: text;
     background-clip: text;
