@@ -12,7 +12,7 @@
     right: 0;
     z-index: -1;
     animation: back 2s;
-    &__circle {
+    &__circle {             /*Circle with all borders colored*/
         border: transparent;
         border-radius: 50%;
         width: 125px;
@@ -28,7 +28,7 @@
         border-top: 10px solid $principalColor;
         border-bottom: 10px solid $secondaryColor;
     }
-    &__circle--little {
+    &__circle--little {     /*Circle with only 2 borders colored*/
         border: transparent;
         border-radius: 50%;
         width: 70px;
@@ -46,6 +46,7 @@
     }
 }
 
+/**Rotate and change opacity of the circle**/
 @keyframes spin {
     0% {
         transform: rotate(0deg) ;
@@ -63,6 +64,7 @@
     }
 }
 
+/**AntiRotate and change opacity of the little circle**/
 @keyframes reversespin {
     0% {
         transform: rotate(0deg);
@@ -80,6 +82,7 @@
     }
 }
 
+/**Change opacity of the background**/
 @keyframes back {
     0% {
         background-color: white;

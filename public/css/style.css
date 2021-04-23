@@ -66,6 +66,7 @@ a:not(.btn):visited {
   animation: back 2s;
 }
 .loading__circle {
+  /*Circle with all borders colored*/
   border: transparent;
   border-radius: 50%;
   width: 125px;
@@ -82,6 +83,7 @@ a:not(.btn):visited {
   border-bottom: 10px solid #9356DC;
 }
 .loading__circle--little {
+  /*Circle with only 2 borders colored*/
   border: transparent;
   border-radius: 50%;
   width: 70px;
@@ -98,6 +100,7 @@ a:not(.btn):visited {
   border-bottom: 10px solid #9356DC;
 }
 
+/**Rotate and change opacity of the circle**/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -112,6 +115,7 @@ a:not(.btn):visited {
     opacity: 0;
   }
 }
+/**AntiRotate and change opacity of the little circle**/
 @keyframes reversespin {
   0% {
     transform: rotate(0deg);
@@ -126,6 +130,7 @@ a:not(.btn):visited {
     opacity: 0;
   }
 }
+/**Change opacity of the background**/
 @keyframes back {
   0% {
     background-color: white;
@@ -229,6 +234,7 @@ body section nav ol li:hover i {
   justify-content: center;
 }
 
+/**When hover gradient is lighter and the shadow darker**/
 .btn:hover {
   filter: saturate(150%);
   box-shadow: 0px 5px 5px #b1b1b1;
@@ -299,7 +305,6 @@ body section nav ol li:hover i {
   margin: 0;
 }
 
-/***Animation***/
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -371,34 +376,22 @@ body section nav ol li:hover i {
   color: white;
   padding: 1rem 0;
   border-radius: 0 1.1rem 1.1rem 0;
-  width: 0;
   text-align: center;
+  transition: width 0.5s linear;
+  width: 0vw;
+}
+.check__icon {
+  transform: rotate(0deg);
 }
 
 .item:hover .check {
-  animation: slideX 1s linear 1 both;
+  width: 20vw;
 }
 .item:hover .check__icon {
-  animation: rollon 0.5s linear;
-  animation-delay: 0.5s;
+  transform: rotate(360deg);
+  transition: 0.5s;
 }
 
-@keyframes slideX {
-  from {
-    width: 0vw;
-  }
-  to {
-    width: 20vw;
-  }
-}
-@keyframes rollon {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 .header {
   display: flex;
   justify-content: center;

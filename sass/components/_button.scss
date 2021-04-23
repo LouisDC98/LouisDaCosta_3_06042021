@@ -14,6 +14,7 @@
     justify-content: center;
 }
 
+/**When hover gradient is lighter and the shadow darker**/
 .btn:hover {
     filter: saturate(150%);
     @include button-shadow-dark;

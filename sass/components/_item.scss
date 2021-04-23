@@ -8,7 +8,7 @@
     @include button-shadow;
     animation: fadein 1.5s;
     overflow: hidden;
-    &__body {
+    &__body { 
         padding: 0.7rem 1rem;
         flex-grow: 1;
         overflow: hidden;
@@ -29,7 +29,7 @@
     }
 }
 
-/***Animation***/
+// Apparition en fondu et l'un après l'autre des choix dans le menu
 @keyframes fadein {
     0% {
         opacity: 0;
