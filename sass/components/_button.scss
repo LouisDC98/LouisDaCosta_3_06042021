@@ -1,0 +1,21 @@
+/**Button with gradient**/
+
+.btn {
+    @include button-shadow;
+    border-radius: 2rem;
+    background: linear-gradient($principalColor, $secondaryColor);
+    color: white;
+    padding: 1rem;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/**When hover gradient is lighter and the shadow darker**/
+.btn:hover {
+    filter: saturate(150%);
+    @include button-shadow-dark;
+}

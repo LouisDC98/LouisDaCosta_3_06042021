@@ -1,0 +1,26 @@
+/**Card for each restaurant**/
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 0 0 1rem 0;
+    position: relative;
+    @include button-shadow;
+    &__img{
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+        width: 100%;
+        height: 10rem;
+    }
+    &__description {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        &__repas {
+            margin: 0;
+            &__subtitle {
+                margin: 0;
+            }
+        }
+    }
+}

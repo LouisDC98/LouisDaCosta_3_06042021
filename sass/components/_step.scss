@@ -1,0 +1,68 @@
+/**Step of a list backgorund color becomes seocndary color when hover**/
+
+.blockStep {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 0;
+    & ol {
+        padding: 0;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        & ol {
+            width: 100vw;
+        }
+    }
+    &__step {
+        @include button-shadow;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        padding: 1.3rem 0;
+        border: none;
+        width: 85vw;
+        background: rgb(248, 248, 248);
+        outline: none;
+        font-weight: bold;
+        position: relative;
+        @include desktop {
+            display: block;
+            float: left;
+            width: 30vw;
+            margin-left: 1rem;
+        }
+            &__number{
+                margin: 0;
+                color: white;
+                position: absolute;
+                left: -12px;
+                background-color: $secondaryColor;
+                border-radius: 50%;
+                height: 24px;
+                width: 24px;
+                vertical-align: middle;
+                text-align: center;
+            }   
+            &__icon {
+                color: grey;
+                margin-left: 2.5rem;
+                width: 10%;
+                @include desktop {
+                    margin-left: 1rem;
+                }
+            }
+    }   
+}
+
+body section nav ol li:hover {
+    background-color: rgba($secondaryColor, .3);
+    transition: background-color 0.7s;
+    & i {
+        color: $secondaryColor;
+    }
+}
