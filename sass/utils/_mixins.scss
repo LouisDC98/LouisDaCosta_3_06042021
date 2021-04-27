@@ -6,6 +6,11 @@
     box-shadow: 0px 5px 5px rgb(177, 177, 177);
 }
 
+@mixin principalGradient {
+    background: linear-gradient($principalColor, $secondaryColor);
+    
+}
+
 @mixin desktop {
     @media (min-width: 767px) {
         @content;
