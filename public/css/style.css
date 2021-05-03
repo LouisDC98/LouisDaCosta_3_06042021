@@ -55,7 +55,7 @@ a:not(.btn):visited {
 .loading {
   display: flex;
   width: 100%;
-  height: 535%;
+  height: 100%;
   margin: auto;
   position: absolute;
   top: 0;
@@ -128,6 +128,7 @@ a:not(.btn):visited {
   100% {
     transform: rotate(-360deg) scale(0);
     opacity: 0;
+    display: none;
   }
 }
 /**Change opacity of the background**/
@@ -366,18 +367,19 @@ body section nav ol li:hover i {
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /**Validation on each items with animation**/
 .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
   background-color: #99E2D0;
   color: white;
-  padding: 1rem 0;
   border-radius: 0 1.1rem 1.1rem 0;
   text-align: center;
-  transition: width 0.5s linear;
+  transition: width 0.7s ease-in-out;
   width: 0vw;
 }
 .check__icon {
@@ -388,8 +390,8 @@ body section nav ol li:hover i {
   width: 20vw;
 }
 .item:hover .check__icon {
-  transform: rotate(360deg);
-  transition: 0.5s;
+  transform: rotate(-360deg);
+  transition: 1.4s;
 }
 
 .header {
@@ -481,26 +483,27 @@ body section nav ol li:hover i {
   justify-content: center;
 }
 
-.footerNav {
+.footer {
   background-color: #3f3f3f;
 }
-.footerNav__text {
+.footer__header {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+.footer ul {
   color: white;
   list-style: none;
   margin: 0;
   padding: 1rem 1rem 2rem 1rem;
 }
-.footerNav__text__header {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 0.7rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-.footerNav__text li a {
+.footer li a {
   text-decoration: none;
   color: white;
 }
-.footerNav__text li i {
+.footer li i {
   width: 1.5rem;
 }
 

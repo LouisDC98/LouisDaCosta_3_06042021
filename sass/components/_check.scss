@@ -1,17 +1,19 @@
 /**Validation on each items with animation**/
 
 .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
     background-color: $thirdColor;
     color: white;
-    padding: 1rem 0;
     border-radius: 0 1.1rem 1.1rem 0;
     text-align: center;
-    transition: width 0.5s linear;
+    transition: width $transitionTime ease-in-out;
     width: 0vw;
     &__icon {
         transform: rotate(0deg);
-        // transition: 0.5s; Rotation de l'icone lors du retour
+        // transition: $transitionTime; Rotation de l'icone lors du retour
     }
 }
 // Apparition de la div check et rotation de l'icone dedans
@@ -19,8 +21,8 @@
     .check {
         width: 20vw;
         &__icon {
-            transform: rotate(360deg);
-            transition: 0.5s;
+            transform: rotate(-360deg);
+            transition: $transitionTime*2;
         }
     }
 }

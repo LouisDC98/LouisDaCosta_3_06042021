@@ -3,7 +3,7 @@
 .btn {
     @include button-shadow;
     border-radius: 2rem;
-    background: linear-gradient($principalColor, $secondaryColor);
+    @include principalGradient;
     color: white;
     padding: 1rem;
     border: none;

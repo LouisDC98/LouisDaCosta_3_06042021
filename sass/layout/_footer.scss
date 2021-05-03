@@ -1,24 +1,26 @@
-.footerNav {
+.footer {
     background-color: rgb(63, 63, 63);
-    &__text {
+
+    &__header{
+        font-family: $shrikhand;
+        margin-bottom: 0.7rem;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: white;
+    }
+    & ul {
         color: white;
         list-style: none;
         margin: 0;
         padding: 1rem 1rem 2rem 1rem;
-        &__header{
-            font-family: $shrikhand;
-            margin-bottom: 0.7rem;
-            font-size: 1.2rem;
+    }
+    & li {
+        & a {
             text-decoration: none;
+            color: white;
         }
-        & li {
-            & a {
-                text-decoration: none;
-                color: white;
-            }
-            & i {
-                width: 1.5rem;
-            }
+        & i {
+            width: 1.5rem;
         }
     }
 }
